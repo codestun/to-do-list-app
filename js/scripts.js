@@ -49,4 +49,7 @@ function newItem() {
     // Add the "delete" class to the list item to visually mark it for deletion
     li.addClass("delete");
   }
+
+  // Enable sorting/reordering functionality for the list items
+  $('#list').sortable();
 }
