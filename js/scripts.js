@@ -31,4 +31,22 @@ function newItem() {
   li.on("dblclick", function crossOut() {
     li.toggleClass("strike");
   });
+
+  // Create a new delete button element
+  let crossOutButton = $('<crossOutButton></crossOutButton>');
+
+  // Add the 'X' text as the content of the delete button
+  crossOutButton.append(document.createTextNode('X'));
+
+  // Append the delete button to the list item
+  li.append(crossOutButton);
+
+  // Attach a click event listener to the delete button
+  crossOutButton.on("click", deleteListItem);
+
+  function deleteListItem() {
+
+    // Add the "delete" class to the list item to visually mark it for deletion
+    li.addClass("delete");
+  }
 }
