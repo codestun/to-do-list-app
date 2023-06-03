@@ -20,4 +20,15 @@ function newItem() {
     // Append the list item to the list
     $('#list').append(li);
   }
+
+  // Crossing an item out:
+  function crossOut() {
+
+    // Toggle the "strike" class to cross out or remove the strike on the list item
+    li.toggleClass("strike");
+  }
+  // Toggle the "strike" class on double-click
+  li.on("dblclick", function crossOut() {
+    li.toggleClass("strike");
+  });
 }
