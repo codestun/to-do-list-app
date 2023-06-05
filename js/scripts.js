@@ -46,8 +46,8 @@ function newItem() {
 
   function deleteListItem() {
 
-    // Add the "delete" class to the list item to visually mark it for deletion
-    li.addClass("delete");
+    // Remove list item from the list
+    li.remove();
   }
 
   // Enable sorting/reordering functionality for the list items
